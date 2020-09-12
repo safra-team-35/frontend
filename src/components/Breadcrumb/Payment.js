@@ -2,12 +2,15 @@ import React from 'react';
 import Breadcrumb from '../Breadcrumb';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
+import Cards from '../paymentMethods/Cards';
 
 export default function Payment() {
   return (
     <div>
       <Navbar />
       <Breadcrumb path="/payment" />
+
+      <Cards />
 
       <div
         className="row"

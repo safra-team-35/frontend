@@ -5,12 +5,12 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './index.css';
 
 import App from './App';
-import Payment from './components/Breadcrumb/Payment';
+import Payment from './components/breadcrumb/Payment';
+import Description from './components/breadcrumb/Description';
+import Address from './components/breadcrumb/Address';
 import Unavailable from './components/Unavailable';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Description from './components/Breadcrumb/Description';
-import Address from './components/Breadcrumb/Address';
 
 ReactDOM.render(
   <React.StrictMode>
