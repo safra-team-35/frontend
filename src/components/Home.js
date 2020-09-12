@@ -15,7 +15,7 @@ export default function Home() {
     >
       <Link
         to="/description"
-        className="btn-floating btn-large waves-effect waves-light red"
+        className="btn-floating btn-large waves-effect waves-light indigo"
         // style={{
         //   display: 'flex',
         //   justifyContent: 'center',

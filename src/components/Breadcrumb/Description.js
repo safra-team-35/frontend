@@ -22,7 +22,7 @@ export default function Description() {
       >
         <Link
           to="/"
-          className="btn btn-large waves-effect waves-light red col s6"
+          className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
@@ -35,7 +35,7 @@ export default function Description() {
 
         <Link
           to="/payment"
-          className="btn btn-large waves-effect waves-light red col s6"
+          className="btn btn-large waves-effect waves-light indigo col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
