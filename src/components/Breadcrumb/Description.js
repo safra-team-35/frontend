@@ -26,7 +26,7 @@ export default function Description() {
   const [isChecked, setIsChecked] = useState(false);
   const [style, setStyle] = useState();
   const [buttonStyle, setButtonStyle] = useState({
-    backgroundColor: 'lightgray',
+    backgroundColor: 'gray',
   });
   const [icon, setIcon] = useState('');
 
@@ -50,7 +50,7 @@ export default function Description() {
         maxHeight: '20px',
       });
       setIcon('');
-      setButtonStyle({ backgroundColor: 'lightgray', color: 'white' });
+      setButtonStyle({ backgroundColor: 'gray', color: 'white' });
     }
   }, [isChecked]);
 
@@ -99,37 +99,14 @@ export default function Description() {
               type="text"
               readOnly
               id={purchase.valueDescription}
-              value={formatNumber(purchase.value)}
+              value={`${formatNumber(
+                purchase.value + purchase.freightCharge
+              )} (${formatNumber(purchase.value)} + ${formatNumber(
+                purchase.freightCharge
+              )} de entrega)`}
             />
             <label htmlFor={purchase.valueDescription} className="active">
               {purchase.valueDescription}
-            </label>
-          </div>
-
-          <div className="input-field">
-            <input
-              type="text"
-              readOnly
-              id={purchase.categoryDescription}
-              value={purchase.category}
-            />
-            <label htmlFor={purchase.categoryDescription} className="active">
-              {purchase.categoryDescription}
-            </label>
-          </div>
-
-          <div className="input-field">
-            <input
-              type="text"
-              readOnly
-              id={purchase.freightChargeDescription}
-              value={formatNumber(purchase.freightCharge)}
-            />
-            <label
-              htmlFor={purchase.freightChargeDescription}
-              className="active"
-            >
-              {purchase.freightChargeDescription}
             </label>
           </div>
 
@@ -158,6 +135,19 @@ export default function Description() {
               {purchase.addressDescription}
             </label>
           </div>
+
+          <div className="input-field">
+            <input
+              type="text"
+              readOnly
+              id={purchase.categoryDescription}
+              value={purchase.category}
+            />
+            <label htmlFor={purchase.categoryDescription} className="active">
+              {purchase.categoryDescription}
+            </label>
+          </div>
+
           <div>
             <a
               className="waves-effect waves-light"
@@ -211,11 +201,13 @@ export default function Description() {
       >
         <Link
           to="/payment"
-          className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
+          className="btn btn-large waves-effect waves-light col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            color: 'black',
+            backgroundColor: 'lightgray',
           }}
         >
           <i className="material-icons">chevron_left</i>

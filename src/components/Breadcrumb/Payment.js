@@ -38,6 +38,18 @@ export default function Payment() {
       <Navbar />
       <Breadcrumb path="/payment" />
 
+      <div>
+        <Link
+          className="btn-floating btn waves-effect waves-light indigo right"
+          style={{
+            marginTop: '60%',
+            marginRight: '45%',
+          }}
+        >
+          <i className="material-icons">add</i>
+        </Link>
+      </div>
+
       <Options
         options={paymentMethods}
         selectedOption={selectedOption}
@@ -57,11 +69,13 @@ export default function Payment() {
       >
         <Link
           to="/address"
-          className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
+          className="btn btn-large waves-effect waves-light col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            color: 'black',
+            backgroundColor: 'lightgray',
           }}
         >
           <i className="material-icons">chevron_left</i>
@@ -70,11 +84,13 @@ export default function Payment() {
 
         <Link
           to="/description"
-          className="btn btn-large waves-effect waves-light indigo col s6"
+          className="btn btn-large waves-effect waves-light col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            color: 'rgb(195,172,108)',
+            backgroundColor: '#2F3A72',
           }}
         >
           <span>Próximo</span>

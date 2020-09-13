@@ -4,7 +4,7 @@ import MenuLink from './MenuLink';
 export default function Breadcrumb() {
   return (
     <div className="center">
-      <nav className="z-depth-0 indigo">
+      <nav className="z-depth-0" style={{ backgroundColor: '#2F3A72' }}>
         <div className="nav-wrapper">
           <div
             className="col s12"

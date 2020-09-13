@@ -31,7 +31,6 @@ export default function Address() {
 
     for (let i = 0; i < adressOptions.length; i++) {
       if (newOption === adressOptions[i].id) {
-        console.log('aqui');
         window.localStorage.setItem(
           'address',
           `${adressOptions[i].description}-${adressOptions[i].type} ${adressOptions[i].name}, ${adressOptions[i].number}`
@@ -49,8 +48,11 @@ export default function Address() {
 
       <div>
         <Link
-          className="btn-floating btn waves-effect waves-light '#2F3A72' right"
-          style={{ marginTop: '60%', marginRight: '10%' }}
+          className="btn-floating btn waves-effect waves-light indigo right"
+          style={{
+            marginTop: '30%',
+            marginRight: '45%',
+          }}
         >
           <i className="material-icons">add</i>
         </Link>
@@ -75,11 +77,13 @@ export default function Address() {
       >
         <Link
           to="/"
-          className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
+          className="btn btn-large waves-effect waves-light col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            color: 'black',
+            backgroundColor: 'lightgray',
           }}
         >
           <i className="material-icons">chevron_left</i>
@@ -88,11 +92,13 @@ export default function Address() {
 
         <Link
           to="/payment"
-          className="btn btn-large waves-effect waves-light indigo col s6"
+          className="btn btn-large waves-effect waves-light  col s6"
           style={{
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
+            color: 'rgb(195,172,108)',
+            backgroundColor: '#2F3A72',
           }}
         >
           <span>Próximo</span>

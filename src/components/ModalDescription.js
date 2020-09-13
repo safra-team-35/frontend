@@ -53,10 +53,13 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
         <div style={styles.flexRow}>
           <span style={styles.title}>Deseja continuar a compra?</span>
           <button
-            className="waves-effect waves-lights btn red dark-4"
+            className="z-depth-0 waves-effect waves-lights btn white dark-4"
             onClick={() => onClose(null)}
+            style={{ color: 'black', fontSize: '10px' }}
           >
-            x
+            <i className="material-icons" style={{ fontSize: '20px' }}>
+              close
+            </i>
           </button>
         </div>
 
@@ -98,7 +101,7 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
               </label>
             </div>
 
-            <div className="input-field">
+            {/* <div className="input-field">
               <input
                 type="text"
                 readOnly
@@ -108,7 +111,7 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
               <label htmlFor={purchase.categoryDescription} className="active">
                 {purchase.categoryDescription}
               </label>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -124,6 +127,7 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
             <button
               className="waves-effect waves-lights btn"
               onClick={handleClick}
+              style={styles.cancelar}
             >
               Cancelar
             </button>
@@ -131,7 +135,12 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
           <Link
             to="/address"
             className="waves-effect waves-lights btn"
-            style={Object.assign({}, styles.flexRow, styles.flexStart)}
+            style={Object.assign(
+              {},
+              styles.flexRow,
+              styles.flexStart,
+              styles.proximo
+            )}
           >
             Próximo
           </Link>
@@ -163,5 +172,15 @@ const styles = {
     marginLeft: '20px',
     color: 'red',
     fontWeight: 'bold',
+  },
+
+  cancelar: {
+    color: 'black',
+    backgroundColor: 'lightgray',
+  },
+
+  proximo: {
+    color: 'rgb(195,172,108)',
+    backgroundColor: '#2F3A72',
   },
 };
