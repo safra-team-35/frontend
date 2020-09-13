@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ModalDescription from './ModalDescription';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div
       style={{
@@ -16,14 +23,11 @@ export default function Home() {
       <Link
         to="/description"
         className="btn-floating btn-large waves-effect waves-light indigo"
-        // style={{
-        //   display: 'flex',
-        //   justifyContent: 'center',
-        //   alignSelf: 'flex-end',
-        // }}
       >
         <i className="material-icons">camera_alt</i>
       </Link>
+
+      {isModalOpen && <ModalDescription onClose={handleClose} />}
     </div>
   );
 }
