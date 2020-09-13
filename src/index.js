@@ -10,6 +10,8 @@ import Description from './components/breadcrumb/Description';
 import Address from './components/breadcrumb/Address';
 import Unavailable from './components/Unavailable';
 
+import Ecommerce from './components/Ecommerce';
+
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
@@ -20,6 +22,7 @@ ReactDOM.render(
         <Route path="/payment" component={Payment} />
         <Route path="/address" component={Address} />
         <Route path="/description" component={Description} />
+        <Route path="/ecommerce" component={Ecommerce} />
         <Route path="*" component={Unavailable} />
       </Switch>
     </BrowserRouter>
