@@ -21,7 +21,7 @@ export default function Breadcrumb() {
               Pagamento
             </MenuLink>
             <MenuLink to="/description" label="Description">
-              Descrição
+              Resumo
             </MenuLink>
           </div>
         </div>

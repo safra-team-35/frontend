@@ -45,7 +45,7 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
           },
           content: {
             width: '80%',
-            height: '85%',
+            height: '55%',
             margin: 'auto',
           },
         }}

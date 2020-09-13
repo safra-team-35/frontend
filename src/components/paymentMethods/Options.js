@@ -5,6 +5,7 @@ export default function Options(children) {
   const [paymentMethod, setPaymentMethod] = useState('1');
   const handlePaymentMethodChange = (newPaymentMethod) => {
     setPaymentMethod(newPaymentMethod);
+    children.onOptionChange(newPaymentMethod);
   };
 
   return (

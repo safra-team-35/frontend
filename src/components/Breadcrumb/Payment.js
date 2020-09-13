@@ -16,8 +16,21 @@ export default function Payment() {
   const [selectedOption, setSelectedOption] = useState();
 
   const handleSelectedOptionChange = (newOption) => {
-    console.log(newOption);
     setSelectedOption(newOption);
+
+    for (let i = 0; i < paymentMethods.length; i++) {
+      if (newOption === paymentMethods[i].id) {
+        window.localStorage.setItem(
+          'paymentMethod',
+          `Cartão de Crédito ${paymentMethods[i].Bank}`
+        );
+      }
+    }
+
+    window.localStorage.setItem(
+      'paymentMethodDescription',
+      'Método de pagamento:'
+    );
   };
 
   return (

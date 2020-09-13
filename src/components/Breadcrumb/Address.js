@@ -22,21 +22,24 @@ export default function Address() {
       number: '2182',
       description: 'Trabalho',
     },
-    {
-      id: '5',
-      state: 'RJ',
-      type: 'Rua',
-      name: 'General Polidoro',
-      number: '25',
-      description: 'Pais',
-    },
   ];
 
   const [selectedOption, setSelectedOption] = useState();
 
   const handleSelectedOptionChange = (newOption) => {
-    console.log(newOption);
     setSelectedOption(newOption);
+
+    for (let i = 0; i < adressOptions.length; i++) {
+      if (newOption === adressOptions[i].id) {
+        console.log('aqui');
+        window.localStorage.setItem(
+          'address',
+          `${adressOptions[i].description}-${adressOptions[i].type} ${adressOptions[i].name}, ${adressOptions[i].number}`
+        );
+      }
+    }
+
+    window.localStorage.setItem('addressDescription', 'Endereço de entrega:');
   };
 
   return (
