@@ -11,13 +11,6 @@ export default function Payment() {
     { id: '3', Bank: 'Itaú', card: '02' },
     { id: '4', Bank: 'NuBank', card: '02' },
     { id: '5', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '6', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '7', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '8', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '9', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '10', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '11', Bank: 'Banco do Brasil', card: '02' },
-    // { id: '12', Bank: 'Banco do Brasil', card: '02' },
   ];
 
   const [selectedOption, setSelectedOption] = useState();
@@ -50,7 +43,7 @@ export default function Payment() {
         }}
       >
         <Link
-          to="/description"
+          to="/address"
           className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
           style={{
             display: 'flex',
@@ -63,7 +56,7 @@ export default function Payment() {
         </Link>
 
         <Link
-          to="/address"
+          to="/description"
           className="btn btn-large waves-effect waves-light indigo col s6"
           style={{
             display: 'flex',

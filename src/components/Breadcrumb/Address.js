@@ -71,7 +71,7 @@ export default function Address() {
         }}
       >
         <Link
-          to="/payment"
+          to="/"
           className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
           style={{
             display: 'flex',
@@ -80,11 +80,11 @@ export default function Address() {
           }}
         >
           <i className="material-icons">chevron_left</i>
-          <span>Voltar</span>
+          <span>Cancelar</span>
         </Link>
 
         <Link
-          to="/"
+          to="/payment"
           className="btn btn-large waves-effect waves-light indigo col s6"
           style={{
             display: 'flex',
@@ -92,8 +92,8 @@ export default function Address() {
             justifyContent: 'center',
           }}
         >
-          <span>Conluir</span>
-          <i className="material-icons">done</i>
+          <span>Próximo</span>
+          <i className="material-icons">chevron_right</i>
         </Link>
       </div>
     </div>

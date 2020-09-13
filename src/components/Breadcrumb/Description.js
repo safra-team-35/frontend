@@ -21,7 +21,7 @@ export default function Description() {
         }}
       >
         <Link
-          to="/"
+          to="/payment"
           className="btn btn-large waves-effect waves-light '#2F3A72' col s6"
           style={{
             display: 'flex',
@@ -34,7 +34,7 @@ export default function Description() {
         </Link>
 
         <Link
-          to="/payment"
+          to="/"
           className="btn btn-large waves-effect waves-light indigo col s6"
           style={{
             display: 'flex',
@@ -42,8 +42,8 @@ export default function Description() {
             justifyContent: 'center',
           }}
         >
-          <span>Próximo</span>
-          <i className="material-icons">chevron_right</i>
+          <span>Conluir</span>
+          <i className="material-icons">done</i>
         </Link>
       </div>
     </div>

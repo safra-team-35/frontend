@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ModalDescription from './ModalDescription';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsModalOpen(true);
+  };
 
   const handleClose = () => {
     setIsModalOpen(false);
@@ -20,12 +23,14 @@ export default function Home() {
         alignItems: 'flex-end',
       }}
     >
-      <Link
-        to="/description"
-        className="btn-floating btn-large waves-effect waves-light indigo"
-      >
-        <i className="material-icons">camera_alt</i>
-      </Link>
+      <div>
+        <button
+          className="btn-floating btn-large waves-effect waves-light indigo"
+          onClick={handleClick}
+        >
+          <i className="material-icons">camera_alt</i>
+        </button>
+      </div>
 
       {isModalOpen && <ModalDescription onClose={handleClose} />}
     </div>

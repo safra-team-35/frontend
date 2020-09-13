@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 import { formatNumber } from '../helpers/formatHelpers';
 
@@ -28,8 +29,8 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
     }
   };
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+  const handleClick = () => {
+    onClose(null);
   };
 
   return (
@@ -77,13 +78,14 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
               <input
                 type="text"
                 readOnly
-                id={purchase.categoryDescription}
-                value={purchase.category}
+                id={purchase.vendorDescription}
+                value={purchase.vendor}
               />
-              <label htmlFor={purchase.categoryDescription} className="active">
-                {purchase.categoryDescription}
+              <label htmlFor={purchase.vendorDescription} className="active">
+                {purchase.vendorDescription}
               </label>
             </div>
+
             <div className="input-field">
               <input
                 type="text"
@@ -95,15 +97,16 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
                 {purchase.valueDescription}
               </label>
             </div>
+
             <div className="input-field">
               <input
                 type="text"
                 readOnly
-                id={purchase.vendorDescription}
-                value={purchase.vendor}
+                id={purchase.categoryDescription}
+                value={purchase.category}
               />
-              <label htmlFor={purchase.vendorDescription} className="active">
-                {purchase.vendorDescription}
+              <label htmlFor={purchase.categoryDescription} className="active">
+                {purchase.categoryDescription}
               </label>
             </div>
           </div>
@@ -118,11 +121,20 @@ export default function ModalGrade({ selectedTransaction, onClose }) {
           }}
         >
           <div style={Object.assign({}, styles.flexRow, styles.flexStart)}>
-            <button className="waves-effect waves-lights btn">Cancelar</button>
+            <button
+              className="waves-effect waves-lights btn"
+              onClick={handleClick}
+            >
+              Cancelar
+            </button>
           </div>
-          <div style={Object.assign({}, styles.flexRow, styles.flexStart)}>
-            <button className="waves-effect waves-lights btn">Próximo</button>
-          </div>
+          <Link
+            to="/address"
+            className="waves-effect waves-lights btn"
+            style={Object.assign({}, styles.flexRow, styles.flexStart)}
+          >
+            Próximo
+          </Link>
         </div>
       </Modal>
     </div>

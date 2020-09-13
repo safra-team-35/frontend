@@ -14,14 +14,14 @@ export default function Breadcrumb() {
               justifyContent: 'center',
             }}
           >
-            <MenuLink to="/description" label="Description">
-              Descrição
+            <MenuLink to="/address" label="Address">
+              Endereço
             </MenuLink>
             <MenuLink to="/payment" label="Payment">
               Pagamento
             </MenuLink>
-            <MenuLink to="/address" label="Address">
-              Endereço
+            <MenuLink to="/description" label="Description">
+              Descrição
             </MenuLink>
           </div>
         </div>
