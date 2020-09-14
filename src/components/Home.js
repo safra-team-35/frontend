@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ModalDescription from './ModalDescription';
 
 export default function Home() {
+  window.localStorage.setItem('userId', 1);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {

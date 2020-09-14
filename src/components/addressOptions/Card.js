@@ -36,8 +36,8 @@ export default function Card({
       name={children.id}
       onClick={handleClick}
     >
-      {/* {`${children.description}\n${children.type} ${children.name}, ${children.number} - ${children.state}`} */}
-      {`${children.description} - ${children.type} ${children.name}, ${children.number}`}
+      {/* {`${children.description} - ${children.type} ${children.name}, ${children.number}`} */}
+      {`${children.street}, ${children.number} - ${children.zip_code}`}
     </a>
   );
 }

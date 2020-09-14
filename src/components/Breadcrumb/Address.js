@@ -1,10 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Breadcrumb from '../Breadcrumb';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Options from '../addressOptions/Options';
 
+import userService from '../../services/User';
+
 export default function Address() {
+  const [addresses, setAdresses] = useState([]);
+
+  useEffect(() => {
+    const retrieveAddresses = async () => {
+      try {
+        const userId = window.localStorage.getItem('userId');
+        const res = await userService.getUserAddresses(userId);
+
+        let id = 0;
+        const withId = res.data.map((item) => {
+          id = id + 1;
+          return { ...item, id: id.toString() };
+        });
+        console.log(withId);
+        setAdresses(withId);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    retrieveAddresses();
+  }, []);
+
   const adressOptions = [
     {
       id: '1',
@@ -24,7 +49,7 @@ export default function Address() {
     },
   ];
 
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState('1');
 
   const handleSelectedOptionChange = (newOption) => {
     setSelectedOption(newOption);
@@ -59,7 +84,8 @@ export default function Address() {
       </div>
 
       <Options
-        options={adressOptions}
+        // options={adressOptions}
+        options={addresses}
         selectedOption={selectedOption}
         onOptionChange={handleSelectedOptionChange}
       ></Options>
