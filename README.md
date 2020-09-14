@@ -1,3 +1,9 @@
+O Frontend foi desenvolvido em React utilizando o materialize-css.
+
+Seguem algumas telas exemplificando a funcionalidade:
+
+####################################
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
