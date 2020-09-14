@@ -1,3 +1,13 @@
+## 📝 Project
+<img src="public/PagarCSafra.png" >
+
+## Description
+💳 This application aims to offer a new disruptive way to shop online.
+  
+[Demo video](https://www.youtube.com/watch?v=fW9S_7GUWg8)  
+[Pitch video](https://youtu.be/pr8_DBdEyis) 
+
+## Frontend
 O Frontend foi desenvolvido em React utilizando o materialize-css.
 
 Seguem algumas telas exemplificando a funcionalidade:
@@ -12,10 +22,8 @@ Seguem algumas telas exemplificando a funcionalidade:
 <img src=".github/2_pagamento.png">  
   Apresentação do resumo da compra e aprovação do compartilhamento de dados:  
 <img src=".github/3_resumo.png">  
-
-
-
-####################################
+  
+## Yarn Documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
