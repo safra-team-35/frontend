@@ -1,6 +1,19 @@
 O Frontend foi desenvolvido em React utilizando o materialize-css.
 
 Seguem algumas telas exemplificando a funcionalidade:
+  
+  Tela inicial do Safra Wallet:  
+<img src=".github/safrawallet.png">  
+  Após leitura do QR Code:  
+<img src=".github/leitura_qr_code.png">  
+  Seleção do endereço:  
+<img src=".github/1_endereco.png">  
+  Seleção do método de pagamento:  
+<img src=".github/2_pagamento.png">  
+  Apresentação do resumo da compra e aprovação do compartilhamento de dados:  
+<img src=".github/3_resumo.png">  
+
+
 
 ####################################
 
